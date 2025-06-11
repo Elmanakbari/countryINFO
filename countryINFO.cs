@@ -61,3 +61,22 @@ namespace CountryCapitalApp
                 {"Jordan", "Amman"},
                 {"Morocco", "Rabat"},
                 {"Iraq", "Baghdad"},
+                {"Libya", "Tripoli"}
+            };
+
+            Console.WriteLine("نام کشور را وارد کنید تا پایتخت آن را دریافت کنید:");
+            string country = Console.ReadLine();
+
+            string capital;  // تعریف متغیر قبل از TryGetValue
+
+            if (capitals.TryGetValue(country, out capital))
+            {
+                Console.WriteLine($"پایتخت {country}، {capital} است.");
+            }
+            else
+            {
+                Console.WriteLine("کشور یافت نشد.");
+            }
+        }
+    }
+}
